@@ -1,0 +1,14 @@
+  All:
+    handler: ./cases/DptoCases/All.All
+    events: 
+      - httpApi: 
+          path: /departments/all
+          method: GET
+  UpdateDepartment:
+    handler: ./cases/DptoCases/Update.UpdateDepartment
+    events: 
+      - httpApi: 
+          path: /departments/{id}
+          method: PUT
+          authorizer:
+            name: serviceAuthorizer

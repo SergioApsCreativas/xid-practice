@@ -1,0 +1,8 @@
+  CreateUser:
+    handler: ./cases/UserCases/Create.CreateUser
+    events: 
+      - httpApi: 
+          path: /user/create
+          method: POST
+  LoginUserLambda:
+    handler: ./cases/UserCases/Login.handler
